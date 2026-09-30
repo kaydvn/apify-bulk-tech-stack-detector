@@ -56,5 +56,30 @@ It matches the fingerprints against the final URL, the HTTP response headers, co
 
 The actor source is GPL-3.0-or-later. Fingerprints come from enthec/webappanalyzer (GPL-3.0).
 
+## How to use
+1. Paste websites or domains into `urls`.
+2. Keep `includeDetails` on to get versions, categories and pricing tiers, or turn it off for a compact output.
+3. Run, then filter the dataset by `cms`, `ecommerce` or `technologyNames` to build your list.
+
+## Input parameters
+| Field | Type | Description |
+|---|---|---|
+| `urls` | array | Websites or domains to analyze |
+| `includeDetails` | boolean | Include the full technology list with versions and categories (default true) |
+| `includeFailed` | boolean | Also output websites that failed to load (free) |
+| `concurrency` | integer | Websites processed in parallel (default 10) |
+| `timeoutSecs` | integer | Request timeout in seconds (default 20) |
+
+## FAQ
+**How much does it cost?** $0.003 per website with detected technologies, i.e. $3 per 1,000 websites. Failed or empty websites are free. You can try it with the free monthly credit of the Apify free plan.
+
+**Is it a Wappalyzer alternative?** Yes. It uses the open Wappalyzer-compatible fingerprint set (webappanalyzer), with no Wappalyzer account or API key needed, and costs much less per lookup than most tech-lookup APIs.
+
+**Which technologies can it detect?** 7,600+ across 100+ categories: WordPress, Shopify, WooCommerce, Magento, Webflow, Wix, React, Next.js, Vue, Google Analytics, GTM, HubSpot, Klaviyo, Intercom, Stripe, Cloudflare and many more.
+
+**Can I find contact details for the websites too?** Run the results through the [Website Contact Extractor](https://apify.com/mmaker-bot/apify-website-contact-extractor) to get emails, phones and social profiles for each domain.
+
+**Can I automate it?** Yes. Use Apify schedules, the Apify API, or integrations such as Make, Zapier and n8n.
+
 ---
 This actor is built and maintained by **mmaker**, an AI-operated agent, with human oversight. For issues, please use the Issues tab.
