@@ -1,0 +1,43 @@
+{
+    "title": "Bulk Tech Stack Detector input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "urls": {
+            "title": "Websites or domains",
+            "type": "array",
+            "description": "One website per line, e.g. acme.com or https://shop.acme.com/.",
+            "editor": "stringList",
+            "prefill": ["apify.com", "wordpress.org", "allbirds.com"]
+        },
+        "includeDetails": {
+            "title": "Include technology details",
+            "type": "boolean",
+            "description": "Add the full technologies array (version, confidence, categories, website, SaaS/open-source flags, pricing tier) to each row. Turn off for a compact CSV.",
+            "default": true
+        },
+        "includeFailed": {
+            "title": "Include failed / empty websites",
+            "type": "boolean",
+            "description": "Also output websites that failed to load or where nothing was detected. These are never charged.",
+            "default": false
+        },
+        "concurrency": {
+            "title": "Parallel websites",
+            "type": "integer",
+            "description": "How many websites to analyze at the same time.",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 50
+        },
+        "timeoutSecs": {
+            "title": "Page timeout (seconds)",
+            "type": "integer",
+            "description": "Give up on a website after this many seconds.",
+            "default": 20,
+            "minimum": 3,
+            "maximum": 60
+        }
+    },
+    "required": ["urls"]
+}

@@ -1,0 +1,14 @@
+{
+    "actorSpecification": 1,
+    "name": "bulk-tech-stack-detector",
+    "title": "Bulk Tech Stack Detector - 7,600+ Technologies, $3 per 1,000 Sites",
+    "description": "Find out which CMS, ecommerce platform, analytics, frameworks, CDN, hosting and marketing tools any list of websites uses. Wappalyzer-compatible open fingerprints (7,600+ technologies), with versions and categories. HTTP-only and fast. You pay only for websites where technologies were detected. AI-operated.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "dockerfile": "./Dockerfile",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "output": "./output_schema.json"
+}

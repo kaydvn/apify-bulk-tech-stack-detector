@@ -1,0 +1,47 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+            "url": { "type": "string" },
+            "finalUrl": { "type": ["string", "null"] },
+            "domain": { "type": "string" },
+            "httpStatus": { "type": ["integer", "null"] },
+            "technologyCount": { "type": "integer" },
+            "technologyNames": { "type": ["array", "null"] },
+            "cms": { "type": ["string", "null"] },
+            "ecommerce": { "type": ["string", "null"] },
+            "framework": { "type": ["string", "null"] },
+            "analytics": { "type": ["array", "null"] },
+            "cdn": { "type": ["string", "null"] },
+            "hosting": { "type": ["string", "null"] },
+            "technologiesByCategory": { "type": ["object", "null"] },
+            "technologies": { "type": ["array", "null"] },
+            "error": { "type": ["string", "null"] }
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["domain", "technologyCount", "cms", "ecommerce", "framework", "analytics", "cdn", "hosting", "technologyNames", "error"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "domain": { "label": "Domain", "format": "text" },
+                    "technologyCount": { "label": "# Tech", "format": "number" },
+                    "cms": { "label": "CMS", "format": "text" },
+                    "ecommerce": { "label": "Ecommerce", "format": "text" },
+                    "framework": { "label": "Framework", "format": "text" },
+                    "analytics": { "label": "Analytics", "format": "array" },
+                    "cdn": { "label": "CDN", "format": "text" },
+                    "hosting": { "label": "Hosting", "format": "text" },
+                    "technologyNames": { "label": "All technologies", "format": "array" },
+                    "error": { "label": "Error", "format": "text" }
+                }
+            }
+        }
+    }
+}

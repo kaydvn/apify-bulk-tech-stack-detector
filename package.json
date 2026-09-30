@@ -1,0 +1,16 @@
+{
+  "name": "bulk-tech-stack-detector",
+  "version": "1.0.0",
+  "description": "Detect 7,600+ web technologies (CMS, ecommerce, analytics, frameworks, CDN, hosting) on a list of websites. HTTP-only.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js",
+    "fingerprints": "node scripts/fetch-fingerprints.mjs"
+  },
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "dependencies": {
+    "apify": "^3.7.2"
+  }
+}
