@@ -1,4 +1,4 @@
-# Bulk Tech Stack Detector: 7,600+ technologies for $3 per 1,000 websites
+# Tech Stack Detector - Website Technology Lookup (Bulk)
 
 Give it a list of websites and get back what each one is built with: **CMS, ecommerce platform, analytics and marketing tools, JavaScript frameworks, CDN, hosting, payment and chat widgets**, with versions where the site exposes them.
 
