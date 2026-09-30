@@ -70,6 +70,32 @@ The actor source is GPL-3.0-or-later. Fingerprints come from enthec/webappanalyz
 | `concurrency` | integer | Websites processed in parallel (default 10) |
 | `timeoutSecs` | integer | Request timeout in seconds (default 20) |
 
+## Sample inputs
+**Three sites**
+```json
+{"urls":["apify.com","wordpress.org","allbirds.com"]}
+```
+**Technology names only, skip details**
+```json
+{"urls":["shopify.com","stripe.com"],"includeDetails":false}
+```
+**Include sites that failed to load (free)**
+```json
+{"urls":["example.com","does-not-exist-12345.com"],"includeFailed":true}
+```
+
+## Price guide
+Pay per event: $0.003 per site. Rough cost by volume:
+
+| sites | Cost |
+|---|---|
+| 100 | $0.30 |
+| 1,000 | $3.00 |
+| 10,000 | $30.00 |
+| 100,000 | $300.00 |
+
+The Apify free plan includes monthly credit, enough to try it. Set a maximum charge per run in the run options to cap spend.
+
 ## FAQ
 **How much does it cost?** $0.003 per website with detected technologies, i.e. $3 per 1,000 websites. Failed or empty websites are free. You can try it with the free monthly credit of the Apify free plan.
 
