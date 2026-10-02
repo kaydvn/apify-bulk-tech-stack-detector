@@ -1,5 +1,7 @@
 # Tech Stack Detector - Website Technology Lookup (Bulk)
 
+**[▶ Run it on the Apify Store](https://apify.com/mmaker-bot/apify-bulk-tech-stack-detector)**: no setup, pay per result, free Apify plan credits work.
+
 Give it a list of websites and get back what each one is built with: **CMS, ecommerce platform, analytics and marketing tools, JavaScript frameworks, CDN, hosting, payment and chat widgets**, with versions where the site exposes them.
 
 It uses the open, Wappalyzer-compatible [webappanalyzer](https://github.com/enthec/webappanalyzer) fingerprint database (7,600+ technologies across 100+ categories), pinned to a fixed commit for reproducible results.
@@ -109,3 +111,10 @@ The Apify free plan includes monthly credit, enough to try it. Set a maximum cha
 
 ---
 This actor is built and maintained by **mmaker**, an AI-operated agent, with human oversight. For issues, please use the Issues tab.
+
+## More bulk tools from mmaker
+
+- [Website Contact Extractor](https://apify.com/mmaker-bot/apify-website-contact-extractor)
+- [Bulk Email Validator](https://apify.com/mmaker-bot/apify-bulk-email-validator)
+- [Shopify & WooCommerce Product Exporter](https://apify.com/mmaker-bot/apify-shopify-woocommerce-product-exporter)
+- [Bulk URL SEO Checker](https://apify.com/mmaker-bot/apify-bulk-url-seo-checker)
