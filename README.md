@@ -29,14 +29,19 @@ It uses the open, Wappalyzer-compatible [webappanalyzer](https://github.com/enth
 
 ```json
 {
+  "url": "https://example-shop.com/",
+  "finalUrl": "https://www.example-shop.com/",
   "domain": "example-shop.com",
+  "httpStatus": 200,
   "technologyCount": 14,
   "cms": null,
   "ecommerce": "Shopify",
   "framework": null,
   "analytics": ["Google Analytics", "Hotjar"],
   "cdn": "Cloudflare",
+  "hosting": null,
   "technologyNames": ["Cloudflare", "Google Analytics", "Hotjar", "Klaviyo", "Shopify", "..."],
+  "technologiesByCategory": { "Ecommerce": ["Shopify"], "CDN": ["Cloudflare"] },
   "technologies": [
     { "name": "Shopify", "version": null, "confidence": 100, "categories": ["Ecommerce"], "saas": true, "pricing": ["low", "recurring"], "implied": false }
   ]
@@ -68,7 +73,7 @@ The actor source is GPL-3.0-or-later. Fingerprints come from enthec/webappanalyz
 |---|---|---|
 | `urls` | array | Websites or domains to analyze |
 | `includeDetails` | boolean | Include the full technology list with versions and categories (default true) |
-| `includeFailed` | boolean | Also output websites that failed to load (free) |
+| `includeFailed` | boolean | Also output websites that failed to load or showed nothing detectable (free); default false |
 | `concurrency` | integer | Websites processed in parallel (default 10) |
 | `timeoutSecs` | integer | Request timeout in seconds (default 20) |
 
@@ -86,8 +91,8 @@ The actor source is GPL-3.0-or-later. Fingerprints come from enthec/webappanalyz
 {"urls":["example.com","does-not-exist-12345.com"],"includeFailed":true}
 ```
 
-## Price guide
-Pay per event: $0.003 per site. Rough cost by volume:
+## Pricing
+Pay per event: the `site` event costs $0.003 per website where at least one technology was detected (that is $3.00 per 1,000 sites). Failed or empty websites are free. Rough cost by volume:
 
 | sites | Cost |
 |---|---|
